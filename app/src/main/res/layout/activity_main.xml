@@ -18,14 +18,13 @@
         app:layout_constraintTop_toTopOf="parent"
         android:gravity="center"
         android:background="#323333">
-
-
-
-
+      <ScrollView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
 
         <androidx.cardview.widget.CardView
-            android:layout_width="382dp"
-            android:layout_height="251dp"
+            android:layout_width="349dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/parent_passscode_card_design"
             app:cardCornerRadius="9dp"
@@ -36,21 +35,22 @@
                 android:id="@+id/cancelButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/baseline_cancel_24"
                 android:layout_gravity="end"
                 android:layout_marginStart="70dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginBottom="30dp"
                 android:background="@null"
+                android:src="@drawable/baseline_cancel_24"
 
 
                 />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:gravity="center"
+                android:orientation="vertical"
                 android:padding="16dp">
 
                 <TextView
@@ -60,28 +60,27 @@
                     android:fontFamily="@font/acme"
                     android:text="Enter the passcode"
                     android:textColor="#333333"
-                    android:textSize="34sp"
-                    tools:ignore="HardcodedText"
-                    />
+                    android:textSize="30sp"
+                    tools:ignore="HardcodedText" />
 
                 <EditText
 
                     android:id="@+id/Passcode"
-                    android:layout_width="350dp"
+                    android:layout_width="300dp"
                     android:layout_height="60dp"
-                    android:importantForAutofill="no"
-                    android:inputType="textPassword"
-                    android:textColor="#333333"
-                    android:fontFamily="@font/acme"
-                    android:background="@drawable/edittxt_design1"
-                    android:padding="12dp"
                     android:layout_marginTop="30dp"
                     android:layout_marginBottom="-10dp"
+                    android:background="@drawable/edittxt_design1"
+                    android:fontFamily="@font/acme"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword"
+                    android:padding="12dp"
+                    android:textColor="#333333"
                     tools:ignore="LabelFor" />
 
                 <Button
                     android:id="@+id/ParentloginButton"
-                    android:layout_width="350dp"
+                    android:layout_width="300dp"
                     android:layout_height="60dp"
                     android:layout_marginTop="20dp"
                     android:backgroundTint="#FFC000"
@@ -96,7 +95,7 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
-
+      </ScrollView>
     </LinearLayout>
 
 

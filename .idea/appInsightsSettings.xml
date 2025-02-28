@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.mathematics.abilify" />
+                  <option name="mobileSdkAppId" value="1:593098811778:android:10ae7c59f3353c94ec079b" />
+                  <option name="projectId" value="abilify-b2e3f" />
+                  <option name="projectNumber" value="593098811778" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

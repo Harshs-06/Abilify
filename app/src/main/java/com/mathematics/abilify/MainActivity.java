@@ -1,5 +1,6 @@
 package com.mathematics.abilify;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -58,15 +59,18 @@ public class MainActivity extends AppCompatActivity {
             String passcode=passcode_id.getText().toString();
             if(passcode.isEmpty()){
                 Toast.makeText(getApplicationContext(), "Enter a passcode to continue", Toast.LENGTH_SHORT).show();
+                return;
             }
             else {
 
                 if(!passcode.equals(passcode_of_parent)){
                     Toast.makeText(getApplicationContext(),"Enter correct passcode",Toast.LENGTH_SHORT).show();
+                    return;
                 }
-//                else {
-//
-//                }
+                else {
+                     startActivity(new Intent(MainActivity.this,parent_home_page.class));
+                     finish();
+                }
             }
         });
 
