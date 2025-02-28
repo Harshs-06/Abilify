@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".login_page">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/abilifylogo" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/acme"
+        android:letterSpacing="-0.02"
+        android:text="Welcome  Back"
+        android:textColor="#333333"
+        android:textSize="40sp"
+
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USERNAME"
+            tools:ignore="HardcodedText"
+            android:textColor="#333333"
+            android:fontFamily="@font/acme"
+            android:layout_gravity="start"
+            android:textSize="14sp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginStart="10dp"
+        />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="280dp"
+            android:layout_height="50sp"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:fontFamily="@font/acme"
+            android:drawableStart="@drawable/username_icon"
+            android:background="@drawable/login_text_box_design" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PASSWORD"
+            tools:ignore="HardcodedText"
+            android:textColor="#333333"
+            android:fontFamily="@font/acme"
+            android:layout_gravity="start"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            />
+
+
+        <EditText
+            android:id="@+id/password"
+            android:inputType="textPassword"
+            android:drawableStart="@drawable/password_lock_icon"
+            android:layout_width="280dp"
+            android:padding="12dp"
+            android:fontFamily="@font/acme"
+            android:textColor="@color/black"
+            android:layout_height="50sp"
+            android:layout_gravity="center"
+
+            android:background="@drawable/login_text_box_design"
+            />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#FFC000"
+            android:layout_marginTop="20dp"
+            android:textColor="#333333"
+            android:fontFamily="@font/acme"
+            android:text="Login"
+            tools:ignore="HardcodedText"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
