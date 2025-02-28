@@ -2,27 +2,26 @@ package com.mathematics.abilify;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class coming_soon_page extends AppCompatActivity {
+public class LocalServiceDirectory extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_coming_soon_page);
+        setContentView(R.layout.local_service_directory);
 
-        ImageButton homePage=findViewById(R.id.parentHomeIcon);
-        homePage.setOnClickListener(v -> {
-            startActivity(new Intent(coming_soon_page.this,parent_home_page.class));
+        CardView seeTherapist = findViewById(R.id.seeTherapist);
+        seeTherapist.setOnClickListener(v -> {
+            startActivity(new Intent(LocalServiceDirectory.this, therapist_and_counselors_page.class));
         });
-
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

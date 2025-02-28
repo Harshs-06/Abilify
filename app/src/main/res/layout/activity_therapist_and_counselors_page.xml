@@ -56,8 +56,8 @@
         android:layout_height="180dp"
         app:cardBackgroundColor="#f5f5f5"
         app:cardCornerRadius="19dp"
-        app:cardStrokeColor="#FF5733"
-        app:cardStrokeWidth="4dp"
+
+
 
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="@+id/textView3"

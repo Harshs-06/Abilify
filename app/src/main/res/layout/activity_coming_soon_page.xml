@@ -56,4 +56,57 @@
         app:layout_constraintVertical_bias="0.0" />
 
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="2dp"
+        android:background="#333333"
+        android:gravity="start"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageButton
+            android:id="@+id/parentHomeIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:background="@null"
+            android:src="@drawable/parent_taskbar_home_icon" />
+
+        <ImageButton
+            android:id="@+id/parentLocalServiceDirectoryIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="70dp"
+            android:background="@null"
+            android:src="@drawable/parent_taskbar_local_service_directory_icon" />
+
+        <ImageButton
+            android:id="@+id/parentCommunityForumIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="80dp"
+            android:background="@null"
+            android:src="@drawable/parent_taskbar_community_forum_icon" />
+
+
+        <ImageButton
+            android:id="@+id/parentMessageIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="70dp"
+            android:background="@null"
+            android:src="@drawable/parent_taskbar_message_icon" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

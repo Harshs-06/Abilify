@@ -75,7 +75,7 @@
                 android:layout_margin="10dp">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/seetherapist"
+                    android:id="@+id/seeTherapist"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     app:cardCornerRadius="30dp"
@@ -139,6 +139,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
+
                 android:layout_margin="10dp">
 
                 <androidx.cardview.widget.CardView
