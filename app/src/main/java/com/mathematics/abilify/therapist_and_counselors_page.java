@@ -1,29 +1,20 @@
 package com.mathematics.abilify;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class parent_home_page extends AppCompatActivity {
+public class therapist_and_counselors_page extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_parent_home_page);
-
-        CardView checkProgressButton = findViewById(R.id.checkProgressButton);
-
-        checkProgressButton.setOnClickListener(v -> {
-            startActivity(new Intent(parent_home_page.this,coming_soon_page.class));
-
-        });
+        setContentView(R.layout.activity_therapist_and_counselors_page);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
