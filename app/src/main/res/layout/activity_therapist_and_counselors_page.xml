@@ -146,7 +146,7 @@
 
                 <Button
                     android:id="@+id/showOnline"
-                    android:layout_width="120dp"
+                    android:layout_width="140dp"
                     android:layout_height="33dp"
                     android:textSize="12sp"
                     android:backgroundTint="@android:color/transparent"
@@ -158,18 +158,79 @@
                     android:fontFamily="@font/acme"/>
                 <Button
                     android:id="@+id/showInPerson"
-                    android:layout_width="120dp"
+                    android:layout_width="140dp"
                     android:layout_height="33dp"
                     android:textSize="12sp"
                     android:backgroundTint="@android:color/transparent"
                     android:background="@drawable/therapist_show_available_button_design"
                     android:textColor="#333333"
                     android:text="In-Person"
-                    android:layout_marginStart="40dp"
+                    android:layout_marginStart="30dp"
                     android:fontFamily="@font/acme"/>
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/acme"
+                android:textSize="15sp"
+                android:layout_marginTop="-10dp"
+                android:layout_marginStart="8dp"
+                android:text="Available via:"/>
+
+                <TextView
+                    android:id="@+id/js_place_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/acme"
+                    android:textSize="15sp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="-10dp"
+                    android:textStyle="bold"
+                    android:text="Delhi"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/acme"
+                    android:textSize="15sp"
+                    android:layout_marginStart="-115dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Next slot on:"/>
+
+                <TextView
+                    android:id="@+id/js_date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/acme"
+                    android:textSize="15sp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="8dp"
+                    android:textStyle="bold"
+                    android:text="Sat , 03 Mar 10 : 00 AM"/>
+
+
+                <Button
+                    android:id="@+id/bookedTherapist"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+
+                    android:backgroundTint="#ffc000"
+                    android:layout_marginStart="4dp"
+                    android:textSize="13sp"
+                    android:text="Book"
+                    android:fontFamily="@font/acme"
+                    android:textColor="#333333"/>
+
+
+            </LinearLayout>
         </LinearLayout>
 
 

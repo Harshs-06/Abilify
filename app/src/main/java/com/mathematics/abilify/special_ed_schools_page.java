@@ -6,34 +6,26 @@ import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class LocalServiceDirectory extends AppCompatActivity {
+public class special_ed_schools_page extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.local_service_directory);
+        setContentView(R.layout.activity_special_ed_schools_page);
 
-        CardView seeTherapist = findViewById(R.id.seeTherapist);
-        CardView specialSchool = findViewById(R.id.specialSchool);
-        ImageButton homeIcon = findViewById(R.id.parentHomeIcon);
-
-        homeIcon.setOnClickListener(v -> {
-            startActivity(new Intent(LocalServiceDirectory.this,parent_home_page.class));
+        ImageButton homePage=findViewById(R.id.parentHomeIcon);
+        ImageButton localDirectory = findViewById(R.id.parentLocalServiceDirectoryIcon);
+        homePage.setOnClickListener(v -> {
+            startActivity(new Intent(special_ed_schools_page.this,parent_home_page.class));
             finish();
         });
-        specialSchool.setOnClickListener(v -> {
-            startActivity(new Intent(LocalServiceDirectory.this, special_ed_schools_page.class));
-            finish();
-        });
-
-        seeTherapist.setOnClickListener(v -> {
-            startActivity(new Intent(LocalServiceDirectory.this, therapist_and_counselors_page.class));
+        localDirectory.setOnClickListener(v -> {
+            startActivity(new Intent(special_ed_schools_page.this,LocalServiceDirectory.class));
             finish();
         });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

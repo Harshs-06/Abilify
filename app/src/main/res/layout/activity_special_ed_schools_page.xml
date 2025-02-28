@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".special_ed_schools_page">
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="408dp"
+        android:layout_height="111dp"
+        android:background="#ffc000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="286dp"
+        android:layout_height="74dp"
+        android:src="@drawable/abilify_logo2"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:layout_constraintVertical_bias="0.81" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="239dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/therapists_title_design"
+        android:fontFamily="@font/acme"
+        android:padding="12dp"
+        android:text="SPECIAL ED SCHOOLS"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintVertical_bias="0.033"
+        tools:ignore="HardcodedText" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="354dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="28dp"
+
+        app:cardCornerRadius="19dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+
+                android:src="@drawable/asthaspecialschool"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aastha Special School"
+                    android:textColor="#333333"
+                    android:fontFamily="@font/acme"
+                    android:textSize="23sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="7dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="-2dp"
+                    android:drawableStart="@drawable/parent_taskbar_local_service_directory_icon_dark_small"
+                    android:fontFamily="@font/acme"
+                    android:text="Aravalli Vihar Sector , Bhiwadi"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="45dp"
+                        android:backgroundTint="#ffc000"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Call"
+                        android:fontFamily="@font/acme"
+                        android:textColor="#333333"
+                        android:textSize="11sp"
+
+
+
+                        />
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="45dp"
+                        android:backgroundTint="#ffc000"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="20dp"
+                        android:text="WhatsApp"
+                        android:fontFamily="@font/acme"
+                        android:textColor="#333333"
+                        android:textSize="11sp"
+
+
+
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="2dp"
+        android:background="#333333"
+        android:gravity="start"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageButton
+            android:id="@+id/parentHomeIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:background="@null"
+            android:src="@drawable/parent_taskbar_home_icon" />
+
+        <ImageButton
+            android:id="@+id/parentLocalServiceDirectoryIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="70dp"
+            android:background="@null"
+            android:src="@drawable/parent_taskbar_local_service_directory_icon" />
+
+        <ImageButton
+            android:id="@+id/parentCommunityForumIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="80dp"
+            android:background="@null"
+            android:src="@drawable/parent_taskbar_community_forum_icon" />
+
+
+        <ImageButton
+            android:id="@+id/parentMessageIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="70dp"
+            android:background="@null"
+            android:src="@drawable/parent_taskbar_message_icon" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

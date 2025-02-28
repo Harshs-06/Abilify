@@ -143,6 +143,7 @@
                 android:layout_margin="10dp">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/specialSchool"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     app:cardCornerRadius="30dp"

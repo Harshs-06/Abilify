@@ -19,8 +19,14 @@ public class coming_soon_page extends AppCompatActivity {
         setContentView(R.layout.activity_coming_soon_page);
 
         ImageButton homePage=findViewById(R.id.parentHomeIcon);
+        ImageButton localDirectory = findViewById(R.id.parentLocalServiceDirectoryIcon);
         homePage.setOnClickListener(v -> {
             startActivity(new Intent(coming_soon_page.this,parent_home_page.class));
+            finish();
+        });
+        localDirectory.setOnClickListener(v -> {
+            startActivity(new Intent(coming_soon_page.this,LocalServiceDirectory.class));
+            finish();
         });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
