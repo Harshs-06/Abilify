@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "593098811778",
+    "project_id": "abilify-b2e3f",
+    "storage_bucket": "abilify-b2e3f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593098811778:android:10ae7c59f3353c94ec079b",
+        "android_client_info": {
+          "package_name": "com.mathematics.abilify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMCwMil4cybrP4ymAnEnMfKDqixc-9riM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

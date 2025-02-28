@@ -34,7 +34,7 @@
         android:layout_marginTop="36dp"
         android:fontFamily="@font/acme"
         android:letterSpacing="-0.02"
-        android:text="Welcome  Back"
+        android:text="welcome  back !"
         android:textColor="#333333"
         android:textSize="40sp"
 
@@ -108,19 +108,35 @@
             android:background="@drawable/login_text_box_design"
             />
 
-        <Button
-            android:id="@+id/loginButton"
-            android:layout_width="280dp"
-            android:layout_height="50dp"
-            android:backgroundTint="#FFC000"
-            android:layout_marginTop="20dp"
-            android:textColor="#333333"
-            android:fontFamily="@font/acme"
-            android:text="Login"
-            tools:ignore="HardcodedText"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            />
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="280dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#FFC000"
+                android:layout_marginTop="20dp"
+                android:textColor="#333333"
+                android:fontFamily="@font/acme"
+                android:text="Login"
+                android:textSize="20sp"
+                 />
+
+            <ProgressBar
+                android:id="@+id/progress"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:indeterminateTint="#333333"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+
+                />
+        </FrameLayout>
+
 
     </LinearLayout>
 
