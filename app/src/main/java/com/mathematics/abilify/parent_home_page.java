@@ -25,11 +25,16 @@ public class parent_home_page extends AppCompatActivity {
         CardView checkBuddyProgramButton = findViewById(R.id.checkBuddyProgramButton);
 
         ImageButton localServiceDirectory = findViewById(R.id.parentLocalServiceDirectoryIcon);
-
+        ImageButton communityPage = findViewById(R.id.parentCommunityForumIcon);
+        communityPage.setOnClickListener(v -> {
+            startActivity(new Intent(parent_home_page.this,CommunityPage.class));
+            finish();
+        });
         localServiceDirectory.setOnClickListener(v -> {
             startActivity(new Intent(parent_home_page.this,LocalServiceDirectory.class));
             finish();
         });
+
 
         checkProgressButton.setOnClickListener(v -> {
             startActivity(new Intent(parent_home_page.this,coming_soon_page.class));

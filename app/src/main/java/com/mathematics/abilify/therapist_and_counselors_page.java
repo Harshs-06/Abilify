@@ -26,9 +26,14 @@ public class therapist_and_counselors_page extends AppCompatActivity {
         Button bookedTherapist = findViewById(R.id.bookedTherapist);
         ImageButton homeIcon = findViewById(R.id.parentHomeIcon);
         ImageButton localDirectory = findViewById(R.id.parentLocalServiceDirectoryIcon);
+        ImageButton communityPage = findViewById(R.id.parentCommunityForumIcon);
 
         homeIcon.setOnClickListener(v -> {
             startActivity(new Intent(therapist_and_counselors_page.this,parent_home_page.class));
+            finish();
+        });
+        communityPage.setOnClickListener(v -> {
+            startActivity(new Intent(therapist_and_counselors_page.this,CommunityPage.class));
             finish();
         });
 

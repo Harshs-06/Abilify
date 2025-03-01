@@ -22,7 +22,11 @@ public class LocalServiceDirectory extends AppCompatActivity {
         CardView seeTherapist = findViewById(R.id.seeTherapist);
         CardView specialSchool = findViewById(R.id.specialSchool);
         ImageButton homeIcon = findViewById(R.id.parentHomeIcon);
-
+        ImageButton communityPage = findViewById(R.id.parentCommunityForumIcon);
+        communityPage.setOnClickListener(v -> {
+            startActivity(new Intent(LocalServiceDirectory.this,CommunityPage.class));
+            finish();
+        });
         homeIcon.setOnClickListener(v -> {
             startActivity(new Intent(LocalServiceDirectory.this,parent_home_page.class));
             finish();

@@ -20,6 +20,11 @@ public class special_ed_schools_page extends AppCompatActivity {
 
         ImageButton homePage=findViewById(R.id.parentHomeIcon);
         ImageButton localDirectory = findViewById(R.id.parentLocalServiceDirectoryIcon);
+        ImageButton communityPage = findViewById(R.id.parentCommunityForumIcon);
+        communityPage.setOnClickListener(v -> {
+            startActivity(new Intent(special_ed_schools_page.this,CommunityPage.class));
+            finish();
+        });
         homePage.setOnClickListener(v -> {
             startActivity(new Intent(special_ed_schools_page.this,parent_home_page.class));
             finish();
