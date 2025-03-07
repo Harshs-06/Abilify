@@ -52,6 +52,8 @@ dependencies {
     implementation ("com.google.firebase:firebase-database:21.0.0")
     implementation("com.google.firebase:firebase-core:21.1.1")
     implementation ("androidx.recyclerview:recyclerview:1.3.2")
+    implementation("androidx.biometric:biometric:1.2.0-alpha05")
+
 
 
 }

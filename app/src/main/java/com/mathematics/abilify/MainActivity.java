@@ -1,6 +1,8 @@
 package com.mathematics.abilify;
 
 import android.content.Intent;
+
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,12 +13,17 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+import androidx.biometric.BiometricManager;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.biometric.BiometricPrompt;
+import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import java.util.concurrent.Executors;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,11 +47,13 @@ public class MainActivity extends AppCompatActivity {
         ImageButton cancel = findViewById(R.id.cancelButton);
         EditText passcode_id = findViewById(R.id.Passcode);
         Button parentLogin = findViewById(R.id.ParentloginButton);
+        CardView passcode_cardView = findViewById(R.id.passcode_cardView);
 
         passcodeLayout.setVisibility(View.GONE);
-
+        Intent to_parentHomePage_intent = new Intent(MainActivity.this,parent_home_page.class);
         parentProfile.setOnClickListener(v -> {
             passcodeLayout.setVisibility(View.VISIBLE);
+            passcode_cardView.setVisibility(View.GONE);
             card.setVisibility(View.GONE);
             parentProfile.setVisibility(View.GONE);
             childProfile.setVisibility(View.GONE);
@@ -53,7 +62,56 @@ public class MainActivity extends AppCompatActivity {
             t1.setVisibility(View.GONE);
             t2.setVisibility(View.GONE);
             t3.setVisibility(View.GONE);
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                BiometricManager biometricManager=BiometricManager.from(MainActivity.this);
+                if (biometricManager.canAuthenticate(BiometricManager.Authenticators.BIOMETRIC_STRONG)==BiometricManager.BIOMETRIC_SUCCESS) {
+                    BiometricPrompt biometricPrompt = new BiometricPrompt(this, Executors.newSingleThreadExecutor(),new BiometricPrompt.AuthenticationCallback(){
+                        @Override
+                        public void onAuthenticationSucceeded(BiometricPrompt.AuthenticationResult result){
+                            super.onAuthenticationSucceeded(result);
+                            startActivity(to_parentHomePage_intent);
+                            finish();
+                        }
+                        @Override
+                        public void onAuthenticationFailed(){
+                            super.onAuthenticationFailed();
+                            Toast.makeText(getApplicationContext(), "Fingerprint not recognized! Try Again...", Toast.LENGTH_SHORT).show();
+
+                        }
+
+                        @Override
+                        public void onAuthenticationError(int errorCode, CharSequence errString){
+                            super.onAuthenticationError(errorCode,errString);
+                            if (errorCode==BiometricPrompt.ERROR_NEGATIVE_BUTTON){
+                                runOnUiThread(()->passcode_cardView.setVisibility(View.VISIBLE));
+                            }
+                        }
+                    });
+                    BiometricPrompt.PromptInfo promptInfo = new androidx.biometric.BiometricPrompt.PromptInfo.Builder()
+                            .setTitle("Authentication")
+                            .setNegativeButtonText("Using Passcode")
+                            .setAllowedAuthenticators(BiometricManager.Authenticators.BIOMETRIC_STRONG)
+                            .build();
+
+                    biometricPrompt.authenticate(promptInfo);
+                }else {
+                    passcode_cardView.setVisibility(View.VISIBLE);
+                }
+
+
+            }
+
+
         });
+
+
+
+
+
+
+
+
 
         parentLogin.setOnClickListener(v -> {
             String passcode=passcode_id.getText().toString();
@@ -68,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
                 else {
-                     startActivity(new Intent(MainActivity.this,parent_home_page.class));
+                     startActivity(to_parentHomePage_intent);
                      finish();
                 }
             }
